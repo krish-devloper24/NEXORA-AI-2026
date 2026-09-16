@@ -25,7 +25,7 @@ Iron Man / JARVIS Inspired AI Assistant built with HTML, CSS & JavaScript.
 - LocalStorage
 
 ▶️ Live Demo
-
+https://krish-devloper24.github.io/NEXORA-AI-2026/
 
 
 👨‍💻 Developer
