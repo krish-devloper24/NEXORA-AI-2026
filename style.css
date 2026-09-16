@@ -1,0 +1,358 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,body{
+  width:100%;
+  min-height:100%;
+  overflow-x:hidden;
+  overflow-y:auto;
+  background:#050816;
+  color:#00ffff;
+  font-family:Arial, sans-serif;
+}
+
+canvas{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+.container{
+  text-align:center;
+  padding:20px;
+}
+
+h1{
+  color:#00ffff;
+  text-shadow:0 0 20px cyan;
+}
+
+#clock{
+  margin:10px 0 20px;
+  color:white;
+  font-size:22px;
+}
+
+.card{
+  background:rgba(0,20,40,.85);
+  border:2px solid cyan;
+  border-radius:20px;
+  padding:20px;
+  margin:20px auto;
+  width:95%;
+  max-width:700px;
+  box-shadow:0 0 20px cyan;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  background:linear-gradient(90deg,#00ffff,#00bfff);
+  color:black;
+  border:none;
+  border-radius:12px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:hover{
+  box-shadow:0 0 15px cyan;
+}
+
+input,textarea{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  background:#111;
+  color:white;
+  border:1px solid cyan;
+  border-radius:10px;
+}
+
+img{
+  margin-top:15px;
+  max-width:100%;
+  border-radius:10px;
+}
+/* Iron Man Sidebar */
+.sidebar{
+  position:fixed;
+  left:0;
+  top:0;
+  width:220px;
+  height:100%;
+  background:rgba(0,10,25,.95);
+  border-right:2px solid cyan;
+  padding:20px;
+  box-shadow:0 0 20px cyan;
+  z-index:100;
+}
+
+.sidebar h2{
+  color:#00ffff;
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.sidebar button{
+  width:100%;
+  margin:8px 0;
+}
+
+.container{
+  margin-left:240px;
+}
+
+/* AI Orb */
+#orb{
+  position:fixed;
+  right:30px;
+  top:30px;
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  border:3px solid cyan;
+  box-shadow:0 0 30px cyan;
+  animation:orb 2s infinite;
+}
+
+@keyframes orb{
+  50%{
+    transform:scale(1.15);
+    box-shadow:0 0 60px cyan;
+  }
+}
+#video,#solar{
+  border:2px solid cyan;
+  border-radius:12px;
+  margin-top:10px;
+}
+
+#terminal{
+  background:black;
+  color:#00ff00;
+  padding:10px;
+  height:180px;
+  overflow:auto;
+  font-family:monospace;
+}
+.hud{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:10px;
+  margin:20px;
+}
+.hud div{
+  background:#06111f;
+  border:2px solid cyan;
+  border-radius:12px;
+  padding:10px;
+  text-align:center;
+  box-shadow:0 0 10px cyan;
+}
+.jarvis-panel{
+  position:relative;
+  height:260px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.earth{
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  background:radial-gradient(circle,#00d9ff,#001d3d);
+  box-shadow:0 0 35px cyan;
+  animation:spin 10s linear infinite;
+}
+
+@keyframes spin{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+.hud-circle{
+  position:absolute;
+  width:210px;
+  height:210px;
+  border:2px solid cyan;
+  border-radius:50%;
+  animation:pulse 2s infinite;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#00ffff;
+  font-weight:bold;
+}
+
+.scan-line{
+  position:absolute;
+  width:220px;
+  height:2px;
+  background:#00ffff;
+  animation:scan 2s linear infinite;
+}
+
+@keyframes scan{
+  0%{transform:translateY(-90px);}
+  100%{transform:translateY(90px);}
+}
+#bootScreen{
+ position:fixed; inset:0;
+ background:black;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ color:#00ffff;
+ z-index:9999;
+}
+
+.loader{
+ width:220px;height:6px;
+ background:#222;
+ border-radius:20px;
+ overflow:hidden;
+ margin-top:20px;
+}
+.loader::before{
+ content:"";
+ display:block;
+ height:100%; width:0%;
+ background:cyan;
+ animation:load 4s linear forwards;
+}
+@keyframes load{
+ from{width:0%}
+ to{width:100%}
+}
+
+.topbar{
+ display:flex;
+ justify-content:space-between;
+ padding:15px;
+ color:cyan;
+ border-bottom:2px solid cyan;
+}
+
+.hologram{
+ text-align:center;
+ margin:25px;
+}
+
+.orb{
+ width:160px;
+ height:160px;
+ margin:auto;
+ border-radius:50%;
+ border:3px solid cyan;
+ box-shadow:0 0 40px cyan;
+ animation:spin 6s linear infinite,pulse 2s infinite;
+}
+
+@keyframes spin{
+ from{transform:rotate(0deg)}
+ to{transform:rotate(360deg)}
+}
+
+.hud-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+ gap:10px;
+ padding:15px;
+}
+
+.hud-card{
+ background:#081325;
+ border:1px solid cyan;
+ padding:12px;
+ border-radius:12px;
+ text-align:center;
+}
+.earth-container{
+ display:flex;
+ justify-content:center;
+ margin:20px 0;
+}
+
+.earth{
+ width:180px;
+ height:180px;
+ border-radius:50%;
+ background:radial-gradient(circle,#00d9ff,#002b5c,#000814);
+ box-shadow:0 0 40px cyan;
+ animation:rotateEarth 8s linear infinite;
+}
+
+@keyframes rotateEarth{
+ from{transform:rotate(0deg);}
+ to{transform:rotate(360deg);}
+}
+#loginStatus{
+  color:#00ff99;
+  margin-top:10px;
+}
+
+#vaultList{
+  margin-top:10px;
+  color:#7CFC00;
+  font-family:monospace;
+}
+#scanOutput{
+  background:#000;
+  color:#00ff66;
+  padding:12px;
+  border-radius:10px;
+  height:180px;
+  overflow:auto;
+  font-family:monospace;
+}
+.jarvis-core{
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ margin:30px 0;
+}
+.core{
+ width:120px;height:120px;
+ border-radius:50%;
+ background:radial-gradient(circle,#00ffff,#0044ff,#000);
+ box-shadow:0 0 40px cyan;
+ animation:pulse 2s infinite;
+}
+.ring{
+ position:absolute;
+ border:2px solid cyan;
+ border-radius:50%;
+ animation:spin 6s linear infinite;
+}
+.ring1{width:150px;height:150px;}
+.ring2{width:180px;height:180px;animation-duration:8s;}
+.ring3{width:210px;height:210px;animation-duration:10s;}
+.login-page{
+  position:fixed;
+  inset:0;
+  background:#020b18;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.login-box{
+  width:340px;
+  padding:25px;
+  border:2px solid cyan;
+  border-radius:20px;
+  background:#081325;
+  box-shadow:0 0 25px cyan;
+  text-align:center;
+}

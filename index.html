@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXORA AI 2026</title>
+<link rel="stylesheet" href="style.css"
+</head>
+<body>
+ <!-- LOGIN SCREEN -->
+<div id="loginPage" class="login-page">
+  <div class="login-box">
+    <h1>🤖 NEXORA AI 2026</h1>
+
+    <input id="loginUser" placeholder="Username">
+    <input id="loginPass" type="password" placeholder="Password">
+
+    <button onclick="loginNexora()">LOGIN</button>
+    <p id="loginMsg"></p>
+  </div>
+</div>
+
+
+<div id="mainApp" style="display:none;">
+
+  <!-- Yahan se tumhara pura NEXORA AI dashboard start -->
+  <div class="card">
+    <h2>🛡️ Password Vault</h2>
+    ...
+  </div>
+
+  <div class="card">
+    <h2>💻 System Monitor</h2>
+    ...
+  </div>
+
+</div>
+
+<div class="card">
+  <h2>🛡️ Password Vault</h2>
+  <input id="vaultSite" placeholder="Website Name">
+  <input id="vaultPass" placeholder="Password">
+  <button onclick="saveVault()">Save Password</button>
+  <div id="vaultList"></div>
+</div>
+
+<div class="card">
+  <h2>📡 System Monitor</h2>
+  <p>CPU: <span id="cpu">0%</span></p>
+  <p>RAM: <span id="ram">0%</span></p>
+  <p>Network: <span id="network">ONLINE</span></p>
+</div>
+<div class="card">
+  <h3>🌍 AI Hologram Earth</h3>
+  <div class="earth-container">
+    <div class="earth"></div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>🎵 Music Player</h3>
+  <input type="file" id="song" accept="audio/*">
+  <audio id="audio" controls style="width:100%"></audio>
+</div>
+
+<div class="card">
+  <h3>💡 RGB Cyber Mode</h3>
+  <button onclick="rgbMode()">Activate RGB</button>
+</div>
+<div id="bootScreen">
+  <h1>NEXORA AI</h1>
+  <p id="bootText">Initializing System...</p>
+  <div class="loader"></div>
+</div>
+
+<div id="jarvisUI" style="display:none">
+
+  <div class="topbar">
+    <h2>🤖 NEXORA AI OS</h2>
+    <span id="clock"></span>
+  </div>
+
+  <div class="hologram">
+    <div class="orb"></div>
+    <h3 id="status">AI ONLINE</h3>
+  </div>
+
+  <div class="hud-grid">
+    <div class="hud-card">❤️ Health: <span id="health">100%</span></div>
+    <div class="hud-card">🔋 Battery: <span id="battery">Loading...</span></div>
+    <div class="hud-card">🌐 Network: ONLINE</div>
+    <div class="hud-card">💻 CPU: ACTIVE</div>
+  </div>
+
+  <button onclick="voice()">🎤 HEY NEXORA</button>
+  <button onclick="terminalCommand()">💻 HACKER TERMINAL</button>
+
+</div>
+
+<div class="sidebar">
+  <h2>🤖 NEXORA AI</h2>
+
+  <button onclick="voice()">🎤 Hey Nexora</button>
+  <button onclick="terminalCommand()">💻 Hacker Terminal</button>
+  <button onclick="toggleTheme()">🌗 Jarvis / Matrix</button>
+
+  <hr>
+
+  <button onclick="window.scrollTo(0,0)">🏠 Home</button>
+  <button onclick="document.getElementById('weather').scrollIntoView()">🌦️ Weather</button>
+  <button onclick="document.getElementById('notes').scrollIntoView()">📝 Notes</button>
+  <button onclick="document.getElementById('qr').scrollIntoView()">📱 QR</button>
+</div>
+<button onclick="faceUnlock()">📷 Face ID Login</button>
+<button onclick="fingerScan()">🖐️ Fingerprint Scan</button>
+
+<p id="scanStatus"></p>
+
+<div id="orb"></div>
+
+<canvas id="matrix"></canvas>
+
+<div class="container">
+  <h1>🤖 NEXORA AI 2026</h1>
+  <h2 id="clock"></h2>
+
+  <div class="card">
+    <h3>🔐 Password Checker</h3>
+    <input id="pass" type="password" placeholder="Enter Password">
+    <button onclick="checkPass()">Check</button>
+    <p id="result"></p>
+  </div>
+
+  <div class="card">
+    <h3>📝 Notes</h3>
+    <textarea id="notes" rows="4"></textarea><br>
+    <button onclick="saveNotes()">Save</button>
+  </div>
+
+  <div class="card">
+    <h3>📱 QR Generator</h3>
+    <input id="qr" placeholder="Enter Text or URL">
+    <button onclick="makeQR()">Generate</button><br><br>
+    <img id="img" width="180">
+  </div>
+
+  <div class="card">
+    <h3>🌐 Device Info</h3>
+    <button onclick="info()">Show Info</button>
+    <p id="device"></p>
+  </div>
+  <div class="card" id="camera">
+  <h3>📷 Iron Man Face Scanner</h3>
+  <video id="video" width="100%" autoplay playsinline></video>
+  <button onclick="startCamera()">Start Face Scan</button>
+</div>
+
+<div class="card">
+  <h3>🌍 3D Solar System</h3>
+  <canvas id="solar" width="300" height="300"></canvas>
+</div>
+
+<div class="card">
+  <h3>💻 Hacker Terminal</h3>
+  <pre id="terminal">NEXORA AI TERMINAL READY...</pre>
+  <button onclick="hackAnimation()">Run Scan</button>
+</div>
+<div class="hud">
+  <div>❤️ Health <span id="health">100%</span></div>
+  <div>🔋 Battery <span id="battery">Loading...</span></div>
+  <div>💾 RAM <span id="ram">8 GB</span></div>
+  <div>🌐 Status <span style="color:#00ff00">ONLINE</span></div>
+</div>
+
+
+<div class="card">
+  <h3>💻 Hacker Terminal</h3>
+  <pre id="terminal">NEXORA TERMINAL READY...</pre>
+  <button onclick="hackAnimation()">Run Scan</button>
+</div>
+<div class="jarvis-panel">
+  <div class="earth"></div>
+
+  <div class="hud-circle">
+    <span id="aiStatus">🟢 AI ONLINE</span>
+  </div>
+
+  <div class="scan-line"></div>
+</div>
+
+<div class="card">
+  <h3>🚀 Quick Launch</h3>
+
+  <button onclick="openApp('youtube')">▶️ YouTube</button>
+  <button onclick="openApp('github')">💻 GitHub</button>
+  <button onclick="openApp('instagram')">📸 Instagram</button>
+  <button onclick="openApp('whatsapp')">💬 WhatsApp</button>
+</div>
+  <button onclick="wakeNexora()">🤖 Hey Nexora</button>
+
+<button onclick="terminalCommand()">💻 Hacker Terminal</button>
+
+<button onclick="toggleTheme()">🌗 Change Theme</button>
+<button onclick="wakeNexora()">🎤 Hey Nexora</button>
+
+<button onclick="faceUnlock()">📷 Face Unlock</button>
+
+</div>
+<div class="card">
+  <h2>🛰️ AI Command Center</h2>
+
+  <button onclick="aiScan()">🤖 Full System Scan</button>
+  <button onclick="matrixMode()">💚 Matrix Mode</button>
+  <button onclick="jarvisMode()">💙 Jarvis Mode</button>
+
+  <pre id="scanOutput">NEXORA READY...</pre>
+</div>
+
+<div class="card">
+  <h2>🌍 Live Location</h2>
+  <button onclick="getLocation()">📍 Get My Location</button>
+  <p id="locationOut"></p>
+</div>
+<div class="jarvis-core">
+  <div class="ring ring1"></div>
+  <div class="ring ring2"></div>
+  <div class="ring ring3"></div>
+  <div class="core"></div>
+  <h2 id="jarvisStatus">JARVIS ONLINE</h2>
+</div>
+
+
+
+<script src= "script.js"</script>
+
+</body>
+</html>
