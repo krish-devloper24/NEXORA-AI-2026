@@ -547,16 +547,10 @@ function loginNexora() {
   const pass = document.getElementById("loginPass").value.trim();
 
   if (user === "krish_up13" && pass === "Nexora2026") {
-    document.getElementById("loginMsg").innerHTML = "🟢 Access Granted...";
-    speak("Welcome back Krish. Booting Nexora AI.");
-
-    setTimeout(() => {
-      document.getElementById("loginPage").style.display = "none";
-      document.getElementById("mainApp").style.display = "block";
-    }, 2500);
+    document.getElementById("loginPage").style.display = "none";
+    document.getElementById("mainApp").style.display = "block";
   } else {
-    document.getElementById("loginMsg").innerHTML = "❌ Wrong Username or Password";
-    speak("Access denied");
+    document.getElementById("loginMsg").innerText = "❌ Wrong Username or Password";
   }
 }
 function faceUnlock() {
@@ -600,3 +594,11 @@ function openApp(app) {
     window.open(links[app], "_blank");
   }
 }
+// Phone + Login Fix
+window.onload = function () {
+  const login = document.getElementById("loginPage");
+  const app = document.getElementById("mainApp");
+
+  if (login) login.style.display = "flex";
+  if (app) app.style.display = "none";
+};
