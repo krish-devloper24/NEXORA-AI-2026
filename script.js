@@ -1,3 +1,28 @@
+window.onload = () => {
+  document.getElementById("loginPage").style.display = "flex";
+  document.getElementById("mainApp").style.display = "none";
+};
+
+function loginNexora() {
+  const user = document.getElementById("loginUser").value.trim();
+  const pass = document.getElementById("loginPass").value.trim();
+
+  if (user === "krish_up13" && pass === "Nexora2026") {
+    document.getElementById("loginPage").style.display = "none";
+    document.getElementById("mainApp").style.display = "block";
+  } else {
+    document.getElementById("loginMsg").innerText = "Wrong Username or Password";
+  }
+}
+
+function heyNexora() {
+  const msg = new SpeechSynthesisUtterance("Hello Krish, I am Nexora AI.");
+  speechSynthesis.speak(msg);
+}
+
+function openApp(url) {
+  window.open(url, "_blank");
+}
 window.onload = function () {
     document.getElementById("loginPage").style.display = "flex";
     document.getElementById("mainApp").style.display = "none";
