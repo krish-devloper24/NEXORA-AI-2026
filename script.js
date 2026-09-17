@@ -1,5 +1,6 @@
 window.onload = function () {
-  document.getElementById("mainApp").style.display = "none";
+    document.getElementById("loginPage").style.display = "flex";
+    document.getElementById("mainApp").style.display = "none";
 };
 
 function loginNexora() {
@@ -9,6 +10,7 @@ function loginNexora() {
   if (user === "krish_up13" && pass === "Nexora2026") {
     document.getElementById("loginPage").style.display = "none";
     document.getElementById("mainApp").style.display = "block";
+    document.body.style.overflow = "auto";
   } else {
     document.getElementById("loginMsg").innerText = "❌ Wrong Username or Password";
   }
