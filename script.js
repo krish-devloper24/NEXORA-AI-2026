@@ -593,3 +593,16 @@ window.onload = function () {
   if (login) login.style.display = "flex";
   if (app) app.style.display = "none";
 };
+function speak(text){
+  const speech = new SpeechSynthesisUtterance(text);
+  speech.lang = "en-US";
+  speech.rate = 1;
+  window.speechSynthesis.speak(speech);
+}
+
+function heyNexora(){
+  speak("Hello Krish, I am Nexora AI. How can I help you?");
+}
+function openApp(url){
+  window.open(url, "_blank");
+}
