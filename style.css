@@ -3,6 +3,24 @@
   padding:0;
   box-sizing:border-box;
 }
+body{
+  margin:0;
+  overflow-y:auto;
+}
+
+.sidebar{
+  width:100%;
+  position:relative;
+}
+
+.container{
+  margin-left:0;
+  width:100%;
+}
+
+button{
+  width:100%;
+}
 
 html,body{
   width:100%;
